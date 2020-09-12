@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".HospitalDashboard" />
         <activity android:name=".User" />
         <activity android:name=".Hospital" />
         <activity android:name=".Driver" />
