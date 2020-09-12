@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -13,17 +14,24 @@ class MainActivity : AppCompatActivity() {
         next.setOnClickListener {
             submit()
         }
+
+        // All buttons click listeners
+
+        driver_next.setOnClickListener { selection("driver") }
+        user_next.setOnClickListener { selection("user") }
+        track_next.setOnClickListener { selection("hospital") }
+
     }
 
     // Making sure only one option is selected while logging in
-    fun selection(view: View) {
-        if (driver_next.isChecked) {
+    fun selection(btn: String) {
+        if (btn == "driver") {
             user_next.isChecked = false
             track_next.isChecked = false
-        } else if (user_next.isChecked) {
+        } else if (btn == "user") {
             track_next.isChecked = false
             driver_next.isChecked = false
-        } else {
+        } else if (btn == "hospital") {
             user_next.isChecked = false
             driver_next.isChecked = false
         }
@@ -35,8 +43,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, Driver::class.java))
         } else if (user_next.isChecked) {
             startActivity(Intent(this, User::class.java))
-        } else {
+        } else if (track_next.isChecked) {
             startActivity(Intent(this, Hospital::class.java))
+        } else {
+            Toast.makeText(applicationContext, "Please make one choice", Toast.LENGTH_SHORT)
+                .show()
         }
     }
 }

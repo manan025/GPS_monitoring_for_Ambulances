@@ -26,16 +26,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/btn_manager"
-        android:onClick="selection"
         android:text="Login as Driver"
         android:textOff="Login as Driver"
         android:textOn="Login as Driver"
         app:layout_constraintBottom_toTopOf="@+id/user_next"
         app:layout_constraintEnd_toEndOf="@+id/user_next"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/user_next"
-        app:layout_constraintTop_toBottomOf="@+id/track_next"
-        app:layout_constraintVertical_bias="0.461" />
+        app:layout_constraintTop_toBottomOf="@+id/track_next" />
 
     <ToggleButton
         android:id="@+id/user_next"
@@ -45,14 +42,11 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="96dp"
         android:background="@drawable/btn_manager"
-        android:checked="true"
-        android:onClick="selection"
         android:text="Login as normal user"
         android:textOff="Login as normal user"
         android:textOn="Login as normal user"
         app:layout_constraintBottom_toTopOf="@+id/next"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ToggleButton
@@ -61,12 +55,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="88dp"
         android:background="@drawable/btn_manager"
-        android:onClick="selection"
         android:text="Login as Hospital"
         android:textOff="Login as Hospital"
         android:textOn="Login as Hospital"
         app:layout_constraintEnd_toEndOf="@+id/driver_next"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/driver_next"
         app:layout_constraintTop_toBottomOf="@+id/joining_as" />
 
@@ -84,4 +76,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
