@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">GPS Monitoring for Ambulances</string>
+    <string name="enter_hospital_code">Enter your Hospital Code</string>
+</resources>
