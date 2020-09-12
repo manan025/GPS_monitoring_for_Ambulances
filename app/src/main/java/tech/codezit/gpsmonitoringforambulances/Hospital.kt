@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.activity_hospital_dashboard.*
 
 class Hospital : AppCompatActivity() {
 
-    val db =FirebaseFirestore.getInstance()
+    private var db =FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,7 +27,7 @@ class Hospital : AppCompatActivity() {
         } else {
 
             val hospitalRef = db.collection("hospitals")
-                .document(pin.toString())
+                .document(pin.text.toString())
 
             hospitalRef.get()
                 .addOnSuccessListener {
