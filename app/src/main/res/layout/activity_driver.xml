@@ -26,6 +26,8 @@
 
     <com.chaos.view.PinView
         android:id="@+id/pin"
+        style="@style/PinWidget.PinView"
+        android:inputType="number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="236dp"
@@ -45,6 +47,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="32dp"
         android:background="@drawable/go_ahead"
+        android:onClick="submit"
         android:text="Go ahead!"
         android:textColor="@android:color/white"
         android:textSize="18sp"
