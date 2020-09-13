@@ -1,10 +1,14 @@
 package tech.codezit.gpsmonitoringforambulances
 
+import android.Manifest
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.annotation.RequiresApi
+import androidx.core.app.ActivityCompat
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -15,12 +19,28 @@ class MainActivity : AppCompatActivity() {
             submit()
         }
 
+        val requestCode  = 28
+        // foreground only or targeting API level 28 and lower
+        ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), requestCode)
+
         // All buttons click listeners
 
         driver_next.setOnClickListener { selection("driver") }
         user_next.setOnClickListener { selection("user") }
         track_next.setOnClickListener { selection("hospital") }
 
+    }
+
+    @RequiresApi(Build.VERSION_CODES.Q)
+    override fun onStart() {
+        super.onStart()
+        val requestCode = 29
+        // foreground only or targeting API level 28 and lower
+        ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), requestCode)
+        // background and targeting API level 29 and higher
+        ActivityCompat.requestPermissions(this, arrayOf(
+            Manifest.permission.ACCESS_FINE_LOCATION,
+            Manifest.permission.ACCESS_BACKGROUND_LOCATION), requestCode)
     }
 
     // Making sure only one option is selected while logging in

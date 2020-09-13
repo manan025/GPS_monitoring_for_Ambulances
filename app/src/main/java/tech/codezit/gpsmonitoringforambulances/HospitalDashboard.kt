@@ -3,6 +3,7 @@ package tech.codezit.gpsmonitoringforambulances
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_hospital_dashboard.*
 
@@ -67,6 +68,7 @@ class HospitalDashboard : AppCompatActivity() {
         hospitalRef.update("total_beds", totalBeds)
 
 
+        Toast.makeText(applicationContext, "UPLOADED DATA", Toast.LENGTH_SHORT).show()
     }
 
 }

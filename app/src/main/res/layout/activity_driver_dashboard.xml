@@ -4,13 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".webView">
-
-    <WebView
-        android:id="@+id/siteLoader"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp" />
+    tools:context=".DriverDashboard">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

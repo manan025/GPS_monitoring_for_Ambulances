@@ -26,10 +26,15 @@
 
     <com.chaos.view.PinView
         android:id="@+id/pin"
+        style="@style/PinWidget.PinView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="236dp"
         android:hint="1234"
+        android:state_selected="true"
+        android:inputType="number"
+        android:cursorVisible="true"
+        android:focusedByDefault="true"
         android:textColor="@android:color/white"
         android:textColorHint="@android:color/secondary_text_light_nodisable"
         app:itemCount="4"
