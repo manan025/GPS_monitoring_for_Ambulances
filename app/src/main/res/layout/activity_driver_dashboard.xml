@@ -6,4 +6,37 @@
     android:layout_height="match_parent"
     tools:context=".DriverDashboard">
 
+    <Button
+        android:id="@+id/hospitalBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:onClick="loadHospital"
+        android:text="Hospital List"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:onClick="loadSite"
+        android:text="Pick Up Patient"
+        app:layout_constraintEnd_toEndOf="@+id/hospitalBtn"
+        app:layout_constraintStart_toStartOf="@+id/hospitalBtn"
+        app:layout_constraintTop_toBottomOf="@+id/hospitalBtn" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:onClick="covidDashboard"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="@+id/button3"
+        app:layout_constraintStart_toStartOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
