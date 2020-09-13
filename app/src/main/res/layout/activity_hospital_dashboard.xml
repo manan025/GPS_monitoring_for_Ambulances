@@ -46,7 +46,7 @@
         app:layout_constraintTop_toBottomOf="@+id/hospital_name" />
 
     <EditText
-        android:id="@+id/total_beds"
+        android:id="@+id/total_beds_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -57,7 +57,7 @@
         app:layout_constraintTop_toTopOf="@+id/textView6" />
 
     <EditText
-        android:id="@+id/vacant_beds"
+        android:id="@+id/vacant_beds_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"

@@ -3,9 +3,6 @@ package tech.codezit.gpsmonitoringforambulances
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import androidx.core.text.set
-import com.google.firebase.FirebaseApp
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_hospital_dashboard.*
 
@@ -39,10 +36,10 @@ class HospitalDashboard : AppCompatActivity() {
                     gmap_url.setText(it.getString("gmap_url"))
 
                     val total = it.getLong("total_beds")!!.toInt().toString()
-                    total_beds.setText(total)
+                    total_beds_text.setText(total)
 
                     val vacant = it.getLong("vacant_beds")!!.toInt().toString()
-                    vacant_beds.setText(vacant)
+                    vacant_beds_text.setText(vacant)
 
                     phone_number.setText(it.getString("phone"))
                     Log.d("HOSPITAL DATA", "${it.data}")
@@ -55,8 +52,8 @@ class HospitalDashboard : AppCompatActivity() {
     private fun upload() {
         // Upload the data to Google Cloud FireStore
         val uid = code.toString()
-        val totalBeds = total_beds.text.toString().toInt()
-        val vacantBeds = vacant_beds.text.toString().toInt()
+        val totalBeds = total_beds_text.text.toString().toInt()
+        val vacantBeds = vacant_beds_text.text.toString().toInt()
         val phoneNumber = phone_number.text.toString()
         val gMap = gmap_url.text.toString()
 

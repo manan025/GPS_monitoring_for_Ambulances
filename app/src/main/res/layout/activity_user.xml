@@ -9,7 +9,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/before_help"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:visibility="visible">
 
         <Button
             android:id="@+id/help"
@@ -18,7 +19,7 @@
             android:layout_marginStart="24dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="24dp"
-            android:onClick="book"
+            android:onClick="help"
             android:text="Need help"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -145,6 +146,37 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/guideline" />
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/help_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onClick="help"
+        android:visibility="invisible">
+
+
+        <Button
+            android:id="@+id/book_ambulance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="book"
+            android:text="Book Ambulance"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/doctor"
+            app:layout_constraintStart_toStartOf="@+id/doctor"
+            app:layout_constraintTop_toBottomOf="@+id/doctor" />
+
+        <Button
+            android:id="@+id/doctor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="148dp"
+            android:onClick="contactDoctor"
+            android:text="Contact Doctor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

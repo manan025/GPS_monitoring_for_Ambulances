@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HospitalInfo">
+
+    <TextView
+        android:id="@+id/total_beds_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="54dp"
+        android:text="Total Beds"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hospital_name" />
+
+    <TextView
+        android:id="@+id/vacant_beds_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Vacant Beds"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/total_beds_text"
+        app:layout_constraintStart_toStartOf="@+id/total_beds_text"
+        app:layout_constraintTop_toBottomOf="@+id/total_beds_text" />
+
+    <TextView
+        android:id="@+id/phone_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Phone number"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/vacant_beds_text"
+        app:layout_constraintStart_toStartOf="@+id/vacant_beds_text"
+        app:layout_constraintTop_toBottomOf="@+id/vacant_beds_text" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/hospital_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="16dp"
+        android:text="XYZ Hospital"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/call_hospital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Call Hospital"
+        app:layout_constraintBottom_toBottomOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Navigate to Hospital"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/phone_text" />
+
+    <TextView
+        android:id="@+id/total_beds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/total_beds_text"
+        app:layout_constraintEnd_toEndOf="@+id/vacant_beds"
+        app:layout_constraintStart_toStartOf="@+id/vacant_beds"
+        app:layout_constraintTop_toTopOf="@+id/total_beds_text" />
+
+    <TextView
+        android:id="@+id/vacant_beds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="23"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/vacant_beds_text"
+        app:layout_constraintEnd_toEndOf="@+id/phone_number"
+        app:layout_constraintStart_toStartOf="@+id/phone_number"
+        app:layout_constraintTop_toTopOf="@+id/vacant_beds_text" />
+
+    <TextView
+        android:id="@+id/phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+917004252521"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/phone_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/phone_text" />
+</androidx.constraintlayout.widget.ConstraintLayout>
