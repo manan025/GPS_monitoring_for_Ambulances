@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="tech.codezit.gpsmonitoringforambulances">
 
-    <uses-permission android:name="android.permission.INTERNET" /> <!-- For Radar -->
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
 
@@ -13,12 +13,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DriverDashboard"></activity>
+        <activity android:name=".StartScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".DriverDashboard" />
         <activity android:name=".HospitalInfo" />
         <activity android:name=".HospitalList" />
-        <activity android:name=".webView" />
-
-        <receiver
+        <activity android:name=".webView" /> <!-- Not working and not using radar.io anymore -->
+        <!--
+<receiver
             android:name=".UserTracking"
             android:enabled="true"
             android:exported="false">
@@ -26,19 +33,23 @@
                 <action android:name="io.radar.sdk.RECEIVED" />
             </intent-filter>
         </receiver>
-
+        -->
         <activity android:name=".UserTracking" />
         <activity android:name=".HospitalDashboard" />
         <activity android:name=".User" />
         <activity android:name=".Hospital" />
         <activity android:name=".Driver" />
         <activity android:name=".MainActivity">
-            <intent-filter>
+            <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            </intent-filter>-->
+        </activity> <!-- Google Maps -->
+        <!-- TODO: Check if the name is valid or not -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/maps_api_key" />
     </application>
 
 </manifest>
