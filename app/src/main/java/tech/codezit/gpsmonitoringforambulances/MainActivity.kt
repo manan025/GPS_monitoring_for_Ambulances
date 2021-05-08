@@ -40,6 +40,7 @@ class MainActivity : AppCompatActivity() {
         // background and targeting API level 29 and higher
         ActivityCompat.requestPermissions(this, arrayOf(
             Manifest.permission.ACCESS_FINE_LOCATION,
+            Manifest.permission.CALL_PHONE,
             Manifest.permission.ACCESS_BACKGROUND_LOCATION), requestCode)
     }
 

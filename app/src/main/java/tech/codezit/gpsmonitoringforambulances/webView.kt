@@ -15,6 +15,8 @@ class webView : AppCompatActivity() {
         val i = intent.getStringExtra("tracking_url")
 
         siteLoader.settings.javaScriptEnabled = true
-        siteLoader.loadUrl(i)
+        if (i != null) {
+            siteLoader.loadUrl(i)
+        }
     }
 }

@@ -16,7 +16,9 @@ class HospitalList : AppCompatActivity() {
     }
 
     fun goToInfo(view: View) {
+        val code = "7852"
         val i = Intent(this, HospitalInfo::class.java)
+        i.putExtra("code", code)
         startActivity(i)
     }
 
